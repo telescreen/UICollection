@@ -1,0 +1,122 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, ➥h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, ➥big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, ➥i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, ➥legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  }
+  
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@import "variables.less";
+
+body {
+    font-family: @default-font;
+    color: @default-text-color;
+    background: @default-background-color;
+    font-size: @default-font-size;
+}
+
+a {
+    &:link,:visited {
+        color: @default-visited-link-color;
+        outline: none;
+    }
+    &:hover {
+        color: @default-hover-link-color;
+    }
+}
+
+a img {
+    border: none;
+}
+
+.clearfix {
+  display: block;
+  zoom: 1;
+
+  &:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+.wrap {
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  width: 1000px;
+}
+.main {
+  margin: 0 auto;
+  width: 800;
+}
+.main h1 {
+  font: normal 1.5em Georgia, serif;
+  text-align: center;
+}
+.main .divider {
+  margin: 40px 0;
+  width: 100%;
+  display: block;
+  border-bottom: solid 1px #696969;
+}
+.tasks {
+  margin: 0 30px;
+  padding: 0;
+}
+.tasks .task {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75em 0;
+  border-bottom: solid 1px #DCDCDC;
+}
+.tasks .task .content {
+  max-width: 100%;
+  text-align: justify;
+}
+.tasks .task:last-child {
+  border-bottom: none;
+}
+.context-menu {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  background-color: #FFFFFF;
+  border: 1px solid #DCDCDC;
+}
+.context-menu ul li {
+  list-style-type: none;
+}
+.context-menu ul li a {
+  display: block;
+  color: #0066AA;
+  text-decoration: none;
+  padding: 4px 12px;
+}
+.context-menu ul li a:hover {
+  color: #fff;
+  background-color: #0066AA;
+}
+.context-menu.active {
+  display: block;
+}
